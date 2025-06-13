@@ -5,12 +5,12 @@ Most people who want a convenient way to work with containers and are okay with 
 
 ## What's going on?
 
-Now Apple is somewhat entering this space with their **Container** CLI tool and **Containerization** framework. And watch out - I know this sounds weird coming from Apple, but it's probably really true - they released both with an open source license on GitHub. Apple fans are excited and talking about "finally native Docker/OCI container support on Mac". Okay, but what's the reality? And did hell really freeze over and Apple let the penguin into their system? And what exactly does soldier Kefalín imagine under the term "native"?
+Now Apple is somewhat entering this space with their Container toolset. And watch out - I know this sounds weird coming from Apple, but it's probably really true - they released it with an open source license on GitHub  - [here](https://github.com/apple/container) and [here](https://github.com/apple/containerization). Apple fans are excited and talking about "finally native Docker/OCI container support on Mac". Okay, but what's the reality? And did hell really freeze over and Apple let the penguin into their system? And what exactly does soldier Kefalín imagine under the term "native"?
 
 So let's calm down again, drink some water, and clarify one thing - native as in truly NATIVE without any virtualization layer - OCI containers on Mac will never happen. Deal with it.
 And why? Because these containers are a "Linux thing". That means they have support directly in the Linux kernel (which btw containers share among themselves), which handles things like resource limiting using cgroups and so on. There's nothing like that in the Mac kernel.
 
->Small digression - in principle, Mac, given its BSD-like origins, should be closer to a different containerization technology - namely "jails". This is something somewhat similar in the BSD world - except the isolation between "jails" is much greater, so they're much more secure, but also not as flexible in terms of deployment. Oh, and mainly they're not compatible with OCI containers. Just a different world. Don't ask me about them, I've never encountered them.
+>Small digression - in principle, Mac, given its BSD-like origins, should be closer to a different containerization technology - namely "jails". This is something somewhat similar in the BSD world - except the isolation between "jails" is much greater, so they're much more secure, but also not as flexible in terms of deployment. Oh, and mainly they're not compatible with OCI containers. Just a different world. Don't ask me about them, I've never really met them.
 
 ## But containers work for me - just not natively?
 

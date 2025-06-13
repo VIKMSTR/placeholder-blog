@@ -5,7 +5,7 @@ Většina lidí, kteří chtějí pohodlný způsob práce s kontejnery a jsou o
 
 ## Co se to děje?
 
-Do toho teď tak trochu vstupuje Apple se svým **Container** CLI toolem a **Containerization** frameworkem. A bacha - vím, že to zní u Applu divně, ale nejspíš to tak opravdu je - dali obojí s opensource licencí na Github. Jableční fanoušci jsou nadšeni a mluví o "konečně nativní podpoře Docker/OCI kontejnerů na Macu". Ok, ale jaká je skutečnost? A opravdu peklo zamrzlo a jablko si pustilo tučňáka do systému? A čo si tak vojín Kefalín predstavujetě pod pojmom "nativní"?
+Do toho teď tak trochu vstupuje Apple se svým Container nástrojem a libkou. A bacha - vím, že to zní u Applu divně, ale nejspíš to tak opravdu je - dali obojí s opensource licencí na Github - najdete je [tady](https://github.com/apple/container) a [tady](https://github.com/apple/containerization). Jableční fanoušci jsou nadšeni a mluví o "konečně nativní podpoře Docker/OCI kontejnerů na Macu". Ok, ale jaká je skutečnost? A opravdu peklo zamrzlo a jablko si pustilo tučňáka do systému? A čo si tak vojín Kefalín predstavujetě pod pojmom "nativní"?
 
 Tak se zase uklidníme, napijem se vody a ujasníme si jednu věc - nativní jakože opravdu NATIVNÍ bez nějaké virtualizační vrstvy - OCI kontejnery na Macu nebudou nikdy. Deal with it.
 A proč? Protože tyhle kontejnery jsou "linux thing". Tzn, že mají podporu přímo v linuxovém kernelu (kterej btw kontejnery mezi sebou sdílí), který zvládá věci jako resource limiting pomocí cgroups apod. V Mac jádru nic takového není.
