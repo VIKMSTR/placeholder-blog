@@ -10,7 +10,7 @@ Now Apple is somewhat entering this space with their Container toolset. And watc
 So let's calm down again, drink some water, and clarify one thing - native as in truly NATIVE without any virtualization layer - OCI containers on Mac will never happen. Deal with it.
 And why? Because these containers are a "Linux thing". That means they have support directly in the Linux kernel (which btw containers share among themselves), which handles things like resource limiting using cgroups and so on. There's nothing like that in the Mac kernel.
 
->Small digression - in principle, Mac, given its BSD-like origins, should be closer to a different containerization technology - namely "jails". This is something somewhat similar in the BSD world - except the isolation between "jails" is much greater, so they're much more secure, but also not as flexible in terms of deployment. Oh, and mainly they're not compatible with OCI containers. Just a different world. Don't ask me about them, I've never really met them.
+>Small note - in principle, Mac, given its BSD-like origins, should be closer to a different containerization technology - namely "jails". This is something somewhat similar in the BSD world - except the isolation between "jails" is much greater, so they're much more secure, but also not as flexible in terms of deployment. Oh, and mainly they're not compatible with OCI containers. Just a different world. Don't ask me about them, I've never really met them.
 
 ## But containers work for me - just not natively?
 
@@ -25,7 +25,7 @@ Crazy, right?
 Apple boasts that these VMs are really lightweight - that there are no unnecessary libraries, no libc, they use musl (which we know from Alpine Linux) and that the overhead shouldn't be that big.
 What must be acknowledged is somewhat higher security. Besides reducing the _attack vector_ by cutting out things we don't need (you can't attack me through a library I don't have in the system), the isolation between containers is suddenly much greater. When we share files with a container (mount them), we first pass the data to the virtual machine (which is shared by all containers) and only then it gets mounted directly into the container's filesystem. So some malicious container could get access to data that isn't meant for it. Here, file sharing happens directly only with the virtual machine assigned to the container.
 
->Digression #2 - I remember the mental PAIN when I had to first share directories with VirtualBox for the given Linux virtual machine on the ancient Docker for Windows and only then mount them into containers. And of course you could only mount from these shared directories, so people typically handled this by sharing the entire D:/ drive so they wouldn't have to deal with whether the particular directory they're running the container in is accessible from VBox or not. Ugh. I'm glad that's gone.
+>Note #2 - I remember the mental PAIN when I had to first share directories with VirtualBox for the given Linux virtual machine on the ancient Docker for Windows and only then mount them into containers. And of course you could only mount from these shared directories, so people typically handled this by sharing the entire D:/ drive so they wouldn't have to deal with whether the particular directory they're running the container in is accessible from VBox or not. Ugh. I'm glad that's gone.
 
 ## How do you work with it?
 
