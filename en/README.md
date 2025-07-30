@@ -9,5 +9,6 @@ https://github.com/VIKMSTR/placeholder-blog/issues
 
 ## Articles:
 
+* [How I Started Using Vim and Why the Hell I'm Doing It](./How-I-started-using-vim.md)
 * [Self-hosting with Cloudflare Tunnels](./Hosting-with-Cloudflare.md)
 * [Apple Container - Native Linux Containers on Mac?](./Containers-macos.md)

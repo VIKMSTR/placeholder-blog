@@ -10,5 +10,6 @@ https://github.com/VIKMSTR/placeholder-blog/issues
 
 ## Články:
 
+* [Jak jsem rozjížděl Vim](./Jak-jsem-rozjizdel-vim.md)
 * [Vlastní hosting s Cloudflare tunely](./Hosting-s-Cloudflare.md)
 * [Apple Container - nativní linuxové kontejnery na Macu?](./Kontejnery-macos.md)
